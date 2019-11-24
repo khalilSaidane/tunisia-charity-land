@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminDashBoardApiController">
+    <Pane layoutX="2.0" layoutY="1.0" prefHeight="217.0" prefWidth="225.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="855.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin DashBoard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="profileButton" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Profile" textFill="WHITE" />
+            <Button fx:id="usersButton" layoutX="50.0" layoutY="296.0" mnemonicParsing="false" onAction="#navigateToUsers" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="User" textFill="WHITE" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#navigateToPosts" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Posts" textFill="WHITE" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="370.0" mnemonicParsing="false" onAction="#navigateToEvent" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Events" textFill="WHITE" />
+            <Button fx:id="logoutButton" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#navigateToExit" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Logout" textFill="WHITE" />
+            <Button fx:id="apiControllButton" layoutX="50.0" layoutY="403.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Api Control" textFill="WHITE" />
+            <ImageView fitHeight="99.0" fitWidth="142.0" layoutX="54.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/dashboardAdminLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      <effect>
+         <DropShadow />
+      </effect>
+      </Pane>
+   <ImageView fitHeight="121.0" fitWidth="110.0" layoutX="341.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Images/envelope.png" />
+      </image>
+   </ImageView>
+   <Text disable="true" fill="#273c75" fontSmoothingType="LCD" layoutX="294.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAILING API">
+      <font>
+         <Font size="36.0" />
+      </font>
+      
+   </Text>
+   <Circle fx:id="mailingSignal" fill="#c94b44" layoutX="396.0" layoutY="250.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+   <Button fx:id="mailApiTestButton" contentDisplay="TOP" layoutX="313.0" layoutY="277.0" mnemonicParsing="false" onAction="#testMailingAPi" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #4cd137; -fx-background-radius: 10;" text="Test" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <effect>
+         <DropShadow blurType="ONE_PASS_BOX" color="#868484" offsetX="-1.0" offsetY="3.0" radius="14.5525" spread="0.18" width="39.21" />
+      </effect>
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+   </Button>
+   <Text disable="true" fill="#273c75" fontSmoothingType="LCD" layoutX="694.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAP API">
+      <font>
+         <Font size="36.0" />
+      </font>
+   </Text>
+   <ImageView fitHeight="121.0" fitWidth="110.0" layoutX="721.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../Images/map.png" />
+      </image>
+   </ImageView>
+   <Button fx:id="mapApiTestButton" contentDisplay="TOP" layoutX="683.0" layoutY="278.0" mnemonicParsing="false" onAction="#testMapAPi" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #4cd137; -fx-background-radius: 10;" text="Test" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+      <effect>
+         <DropShadow blurType="ONE_PASS_BOX" color="#868484" offsetX="-1.0" offsetY="3.0" radius="14.5525" spread="0.18" width="39.21" />
+      </effect>
+      <font>
+         <Font name="System Bold" size="13.0" />
+      </font>
+   </Button>
+   <Circle fx:id="MapSignal" fill="#c94b44" layoutX="776.0" layoutY="250.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+   <GoogleMapView fx:id="mapView" layoutX="701.0" layoutY="112.0" prefHeight="150.0" prefWidth="150.0" />
+   <TextField fx:id="mailFieldTest" alignment="CENTER" layoutX="255.0" layoutY="332.0" prefHeight="27.0" prefWidth="327.0" style="-fx-background-color: transparent;" />
+   <TextField fx:id="mapFieldTest" alignment="CENTER" layoutX="645.0" layoutY="332.0" prefHeight="27.0" prefWidth="277.0" style="-fx-background-color: transparent;" />
+</AnchorPane>

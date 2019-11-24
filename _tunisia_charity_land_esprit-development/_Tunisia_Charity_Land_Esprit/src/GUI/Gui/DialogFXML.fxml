@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="135.0" prefWidth="272.0" style="-fx-background-color: #273c75;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DialogFXMLController">
+   <children>
+      <Label fx:id="labeldialog" layoutX="47.0" layoutY="55.0" prefHeight="26.0" prefWidth="198.0" text="Supprimé avec succées" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

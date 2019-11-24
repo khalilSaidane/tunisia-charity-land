@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="717.0" prefWidth="1080.0" styleClass="mainFxmlClass" stylesheets="@../css/admindashboardmailcontactfxml.fxml.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminDashBoardMailContactFXMLController">
+   <children>
+      <Pane layoutX="2.0" layoutY="1.0" prefHeight="717.0" prefWidth="197.0" style="-fx-background-color: #C2E7F2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="883.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#3e4e59" fontSmoothingType="LCD" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin DashBoard">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Button fx:id="profileButton" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transaprent;" text="Profile" />
+            <Button fx:id="usersButton" layoutX="50.0" layoutY="296.0" mnemonicParsing="false" onAction="#navigateToUsers" style="-fx-background-color: transparent;" text="User" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transprent;" text="Posts" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="370.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" />
+            <Button fx:id="logoutButton" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transparent;" text="Logout" />
+            <Button fx:id="apiControllButton" layoutX="50.0" layoutY="403.0" mnemonicParsing="false" onAction="#navigateToApiControllButton" style="-fx-background-color: transparent;" text="Api Control" />
+            <ImageView fitHeight="99.0" fitWidth="142.0" layoutX="54.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/dashboardAdminLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="subjectField" layoutX="337.0" layoutY="90.0" prefHeight="36.0" prefWidth="690.0" promptText="Subject" style="-fx-background-color: transparent; -fx-border-color: grey; -fx-border-radius: 10px;" />
+      <Text layoutX="234.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To :">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="202.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject :">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="216.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Body :">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <TextField fx:id="emailField" editable="false" layoutX="335.0" layoutY="19.0" prefHeight="36.0" prefWidth="690.0" style="-fx-background-color: transparent; -fx-border-color: grey; -fx-border-radius: 10px;" />
+      <TextArea fx:id="bodyField" layoutX="343.0" layoutY="166.0" prefHeight="485.0" prefWidth="683.0" promptText="Body" style="-fx-border-color: grey; -fx-border-radius: 20px;" />
+      <Button fx:id="sendButton" layoutX="952.0" layoutY="666.0" mnemonicParsing="false" onAction="#sendMailTo" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #192a56;" text="SEND" textFill="WHITE" />
+   </children>
+</AnchorPane>

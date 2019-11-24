@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminDashBoardEventFXMLController">
+    <children>
+      <TableView fx:id="eventsTable" layoutX="239.0" layoutY="51.0" prefHeight="592.0" prefWidth="843.0">
+        <columns>
+          <TableColumn fx:id="idColumn" minWidth="0.0" prefWidth="37.381866455078125" text="ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="74.61814880371094" text="TITLE" />
+            <TableColumn fx:id="byColumn" prefWidth="70.57281494140625" text="BY" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="386.4272155761719" text="DESCRIPTION" />
+            <TableColumn fx:id="createdAt" prefWidth="92.87890625" text="CREATED_AT" />
+            <TableColumn fx:id="typeColumn" prefWidth="66.40631103515625" text="TYPE" />
+            <TableColumn fx:id="statusColumn" minWidth="0.0" prefWidth="140.29095458984375" text="STATUS" />
+        </columns>
+      </TableView>
+      <Pane layoutX="2.0" layoutY="1.0" prefHeight="217.0" prefWidth="225.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="855.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#3e4e59" fontSmoothingType="LCD" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;" text="Admin DashBoard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="profileButton" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Profile" textFill="#f2eeee" />
+            <Button fx:id="usersButton" layoutX="50.0" layoutY="296.0" mnemonicParsing="false" onAction="#navigateToUsers" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="User" textFill="WHITE" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#navigateToPosts" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Posts" textFill="WHITE" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="370.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Events" textFill="WHITE" />
+            <Button fx:id="logoutButton" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#navigateToExit" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Logout" textFill="#e84118" />
+            <Button fx:id="apiControllButton" layoutX="50.0" layoutY="403.0" mnemonicParsing="false" onAction="#navigateToApiControll" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Api Control" textFill="WHITE" />
+            <ImageView fitHeight="99.0" fitWidth="142.0" layoutX="54.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/dashboardAdminLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane fx:id="buttonPane" layoutX="235.0" layoutY="648.0" prefHeight="69.0" prefWidth="855.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button fx:id="validateButton" layoutX="201.0" layoutY="15.0" mnemonicParsing="false" onAction="#validateSelectedEvent" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #273c75;" text="Validate " textFill="#f5f5f5" />
+            <Button fx:id="deleteButton" layoutX="405.0" layoutY="15.0" mnemonicParsing="false" onAction="#deleteSelectedEvent" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #e84118;" text="Delete" textFill="WHITE" />
+            <Button fx:id="contactButton" layoutX="668.0" layoutY="16.0" mnemonicParsing="false" onAction="#contactEventMaker" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #fbc531;" text="Contact Maker" textFill="WHITE" />
+            <Button fx:id="refreshButton" layoutX="7.0" layoutY="15.0" mnemonicParsing="false" onAction="#refreshData" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #44bd32;" text="Refresh" textFill="WHITE" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CartController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="718.0" prefWidth="191.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="889.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="homeButton" layoutX="48.0" layoutY="191.0" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="blogButton" layoutX="55.0" layoutY="237.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transparent;" text="Blog" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="eventButton" layoutX="45.0" layoutY="291.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="connectionButton" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="storeButton" layoutX="50.0" layoutY="399.0" mnemonicParsing="false" onAction="#navigateToStore" style="-fx-background-color: transparent;" text="Store" textFill="#ff0f0f">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#008ab5" layoutX="503.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="cart_view" layoutX="253.0" layoutY="155.0" prefHeight="407.0" prefWidth="747.0">
+        <columns>
+          <TableColumn fx:id="user_view" prefWidth="133.8666534423828" text="User_ID" />
+          <TableColumn fx:id="prodid_view" prefWidth="103.73331451416016" text="Product_ID" />
+            <TableColumn fx:id="quantity_view" prefWidth="67.19993591308594" text="Quantity" />
+            <TableColumn fx:id="price_view" prefWidth="84.53338623046875" text="Price" />
+            <TableColumn fx:id="delegue_view" prefWidth="102.39993286132812" text="Delegue ID" />
+            <TableColumn fx:id="prodnam_view" prefWidth="134.93331909179688" text="Product Name" />
+            <TableColumn fx:id="total_view" prefWidth="121.86669921875" text="Total" />
+        </columns>
+      </TableView>
+      <Text fill="#008ab5" layoutX="722.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total" wrappingWidth="66.41747921705252">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="tot_tot" layoutX="799.0" layoutY="618.0" prefHeight="38.0" prefWidth="113.0" />
+      <TextField fx:id="userid_cart" layoutX="539.0" layoutY="55.0" prefHeight="30.0" prefWidth="76.0" />
+      <Button fx:id="view_c" layoutX="907.0" layoutY="47.0" mnemonicParsing="false" onAction="#view" prefHeight="40.0" prefWidth="112.0" text="View Cart">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

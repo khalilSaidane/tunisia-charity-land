@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Gui.AdminDashBordFXMLController">
+    <children>
+      <Pane layoutX="299.0" layoutY="42.0" prefHeight="675.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="299.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="42.0">
+         <children>
+            <Text layoutX="200.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="41.16855732433959" />
+            <Text layoutX="190.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <Text layoutX="210.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role" />
+            <TextField fx:id="email" editable="false" layoutX="255.0" prefHeight="30.0" prefWidth="180.0" />
+            <TextField fx:id="password" editable="false" layoutX="256.0" layoutY="39.0" prefHeight="30.0" prefWidth="180.0" />
+            <TextField fx:id="role" editable="false" layoutX="255.0" layoutY="76.0" prefHeight="30.0" prefWidth="180.0" />
+            <Text layoutX="210.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <Text layoutX="181.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expires at" />
+            <Text layoutX="194.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enabled" />
+            <TextField fx:id="idField" layoutX="255.0" layoutY="114.0" prefHeight="30.0" prefWidth="180.0" />
+            <TextField fx:id="expiresField" layoutX="255.0" layoutY="151.0" prefHeight="30.0" prefWidth="180.0" />
+            <TextField fx:id="enabledField" layoutX="255.0" layoutY="191.0" prefHeight="30.0" prefWidth="180.0" />
+            <Text layoutX="193.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Locked" />
+            <Text layoutX="183.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Login" />
+            <TextField fx:id="lockedTextField" layoutX="255.0" layoutY="234.0" prefHeight="30.0" prefWidth="180.0" />
+            <TextField fx:id="lastLoginTextField" layoutX="255.0" layoutY="278.0" prefHeight="30.0" prefWidth="180.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="2.0" layoutY="1.0" prefHeight="217.0" prefWidth="225.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="855.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin DashBoard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="profileButton" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" style="-fx-background-color: transaprent;" text="Profile" textFill="WHITE" />
+            <Button fx:id="usersButton" layoutX="50.0" layoutY="296.0" mnemonicParsing="false" onAction="#navigateToUsers" style="-fx-background-color: transparent;" text="User" textFill="WHITE" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transprent;" text="Posts" textFill="WHITE" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="370.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="#f5f5f5" />
+            <Button fx:id="logoutButton" cache="true" depthTest="ENABLE" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#logout" pickOnBounds="false" text="Logout" textFill="#d30808" textOverrun="CLIP" />
+            <Button fx:id="apiControllButton" layoutX="50.0" layoutY="403.0" mnemonicParsing="false" onAction="#navigateToApiControllButton" style="-fx-background-color: transparent;" text="Api Control" textFill="WHITE" />
+            <ImageView fitHeight="99.0" fitWidth="142.0" layoutX="54.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/dashboardAdminLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      
+      
+   </children>
+</AnchorPane>

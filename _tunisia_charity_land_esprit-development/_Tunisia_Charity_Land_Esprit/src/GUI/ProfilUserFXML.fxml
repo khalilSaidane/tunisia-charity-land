@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="717.0" maxWidth="1080.0" prefHeight="717.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ProfilUserFXMLController">
+   <children>
+      <HBox layoutX="-8.0" layoutY="360.0" prefHeight="100.0" prefWidth="617.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <AnchorPane fx:id="toolbar" layoutX="191.0" prefHeight="79.0" prefWidth="939.0" style="-fx-background-color: #fbc531;">
+         <children>
+            <ImageView fx:id="buttuser" layoutX="90.0" layoutY="8.0" onMousePressed="#handlebutton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-utilisateur-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buttuser1" layoutX="814.0" layoutY="8.0" onMouseClicked="#messanger" onMousePressed="#handlebutton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-salon-de-discussion-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buttorder" layoutX="630.0" layoutY="8.0" onMousePressed="#handlebutton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-panier-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buttblog" layoutX="453.0" layoutY="8.0" onMousePressed="#handlebutton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-comments-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="buttevents" layoutX="264.0" layoutY="8.0" onMousePressed="#handlebutton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-event-accepted-64.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="80.0" prefHeight="382.0" prefWidth="609.0" visible="false" />
+      <AnchorPane fx:id="events" layoutX="191.0" layoutY="80.0" prefHeight="643.0" prefWidth="889.0" visible="false">
+         <children>
+            <TableView fx:id="tableviewuser" layoutX="162.0" layoutY="31.0" prefHeight="279.0" prefWidth="597.0">
+              <columns>
+                <TableColumn fx:id="ceventid" prefWidth="194.0" text="Event_ID" />
+                <TableColumn fx:id="cuserid" prefWidth="174.0" text="ID User" />
+                  <TableColumn fx:id="cdate" prefWidth="228.0" text="Date" />
+              </columns>
+            </TableView>
+            <TextField fx:id="textrech" layoutX="290.0" layoutY="433.0" onKeyReleased="#rechercheavancee" />
+            <TextField fx:id="textsupp" layoutX="536.0" layoutY="433.0" />
+            <Button fx:id="supprimerpart" layoutX="703.0" layoutY="433.0" mnemonicParsing="false" onAction="#supprimerPart" style="-fx-background-color: #273c75;" text="Supprimer" textFill="#fffdfd" />
+            <Label fx:id="warning" layoutX="561.0" layoutY="483.0" prefHeight="17.0" prefWidth="100.0" textFill="RED" />
+            <Label layoutX="170.0" layoutY="437.0" text="Event ID">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttactpart" layoutX="339.0" layoutY="488.0" mnemonicParsing="false" onAction="#actpart" style="-fx-background-color: #273c75;" text="Actualiser" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="blog" layoutX="191.0" layoutY="80.0" prefHeight="643.0" prefWidth="889.0" visible="false">
+         <children>
+            <Label layoutX="236.0" layoutY="366.0" text="Titre">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textmod" layoutX="313.0" layoutY="364.0" />
+            <TextField fx:id="textsuppart" layoutX="569.0" layoutY="364.0" />
+            <Button fx:id="supprimerart" layoutX="751.0" layoutY="364.0" mnemonicParsing="false" onAction="#supprimerArt" style="-fx-background-color: #273c75;" text="Supprimer" textFill="WHITE" />
+            <TableView fx:id="tableviewart" layoutX="110.0" layoutY="25.0" prefHeight="254.0" prefWidth="713.0">
+              <columns>
+                <TableColumn fx:id="cid" prefWidth="62.0" text="ID" />
+                <TableColumn fx:id="cauthorid" prefWidth="83.0" text="Author" />
+                  <TableColumn fx:id="cdateart" prefWidth="106.0" text="Date" />
+                  <TableColumn fx:id="ctitle" prefWidth="112.0" text="Title" />
+                  <TableColumn fx:id="ccontent" prefWidth="87.0" text="Content" />
+                  <TableColumn fx:id="cimage" prefWidth="133.0" text="Imgurl" />
+              </columns>
+            </TableView>
+            <Button layoutX="353.0" layoutY="430.0" mnemonicParsing="false" onAction="#modtitre" style="-fx-background-color: #273c75;" text="Modifier" textFill="WHITE" />
+            <Label fx:id="labelerreur" layoutX="630.0" layoutY="422.0" textFill="RED">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="order" layoutX="191.0" layoutY="76.0" prefHeight="643.0" prefWidth="889.0" visible="false">
+         <children>
+            <Button fx:id="buttsupporder" layoutX="742.0" layoutY="384.0" mnemonicParsing="false" onAction="#supporder" style="-fx-background-color: #273c75;" text="Supprimer" textFill="WHITE" />
+            <TextField fx:id="textsupporder" layoutX="536.0" layoutY="384.0" />
+            <Label layoutX="143.0" layoutY="386.0" text="Quantité">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textmodorder" layoutX="262.0" layoutY="384.0" />
+            <Button fx:id="modorder" layoutX="297.0" layoutY="469.0" mnemonicParsing="false" onAction="#modifierorder" style="-fx-background-color: #273c75;" text="Modifier" textFill="WHITE" />
+            <Label layoutX="733.0" layoutY="470.0" text="Rechercher">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textrechorder" layoutX="536.0" layoutY="469.0" onKeyReleased="#rechercheorder" />
+            <TableView fx:id="tableorder" layoutX="101.0" layoutY="21.0" prefHeight="317.0" prefWidth="713.0">
+              <columns>
+                <TableColumn fx:id="cprodi" prefWidth="121.0" text="Prod ID" />
+                <TableColumn fx:id="cuseridorder" prefWidth="98.0" text="ID" />
+                  <TableColumn fx:id="cquantite" prefWidth="134.0" text="Quantité" />
+                  <TableColumn fx:id="cprix" prefWidth="191.0" text="Prix" />
+                  <TableColumn fx:id="cproductowner" prefWidth="168.0" text="Product Owner" />
+              </columns>
+            </TableView>
+            <Button fx:id="buttactorder" layoutX="91.0" layoutY="469.0" mnemonicParsing="false" onAction="#actorder" style="-fx-background-color: #273c75;" text="Actualiser" textFill="WHITE" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="profil" layoutX="191.0" layoutY="76.0" prefHeight="643.0" prefWidth="889.0">
+         <children>
+            <Label layoutX="53.0" layoutY="30.0" text="A propos de vous :">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="263.0" layoutY="295.0" text="Adresse">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="251.0" layoutY="227.0" text="Password">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="272.0" layoutY="159.0" text="Mail">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="91.0" text="Username">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textemailuser" layoutX="394.0" layoutY="157.0" />
+            <TextField fx:id="textusernameuser" layoutX="394.0" layoutY="89.0" />
+            <TextField fx:id="textpassuser" layoutX="394.0" layoutY="225.0" />
+            <TextField fx:id="textadresseuserr" layoutX="394.0" layoutY="293.0" />
+            <Button fx:id="enregistreruser" layoutX="445.0" layoutY="371.0" mnemonicParsing="false" onAction="#Enregistreruser" style="-fx-background-color: #273c75;" text="Modifier" textFill="WHITE" />
+            <ImageView fx:id="facebookapi" layoutX="774.0" layoutY="403.0" onMousePressed="#facebook" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8-facebook-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="718.0" prefWidth="191.0" style="-fx-background-color: #273c75;">
+         <children>
+            <Button fx:id="homeButton" layoutX="50.0" layoutY="242.0" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="279.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transparent;" text="Blog" textFill="WHITE" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="319.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="WHITE" />
+            <Button fx:id="connectionButton" layoutX="50.0" layoutY="358.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent;" text="Profile" textFill="RED" />
+            <Button fx:id="storeButton" layoutX="50.0" layoutY="404.0" mnemonicParsing="false" onAction="#navigateToStore" style="-fx-background-color: transparent;" text="Store" textFill="WHITE" />
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="logoutbutt" layoutX="46.0" layoutY="447.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

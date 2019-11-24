@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="717.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CrudEventFXMLController">
+   <children>
+      <Pane prefHeight="755.0" prefWidth="201.0" style="-fx-background-color: #273c75;">
+         <children>
+            <Button fx:id="homeButton" layoutX="30.0" layoutY="191.0" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="blogButton" layoutX="30.0" layoutY="237.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transparent;" text="Blog" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="eventButton" layoutX="30.0" layoutY="291.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="associationButton" layoutX="30.0" layoutY="345.0" mnemonicParsing="false" onAction="#navigateToAssociation" style="-fx-background-color: transparent;" text="Association" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="connectionButton" layoutX="4.0" layoutY="397.0" mnemonicParsing="false" onAction="#navigateToProfile" prefHeight="40.0" prefWidth="194.0" style="-fx-background-color: transparent;" text="Login/SignUp" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="storeButton" layoutX="30.0" layoutY="460.0" mnemonicParsing="false" onAction="#navigateToStore" style="-fx-background-color: transparent;" text="Store" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HBox layoutX="207.0" layoutY="8.0" prefHeight="588.0" prefWidth="873.0">
+         <children>
+            <VBox prefHeight="702.0" prefWidth="308.0">
+               <children>
+                  <Label prefHeight="90.0" prefWidth="168.0" />
+                  <Label prefHeight="62.0" prefWidth="159.0" text="     Nouveau evenemt  " textFill="#2e1575">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="img" promptText="Image URL">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="localisation" promptText="Location">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="Short" promptText="breve description">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="Longe" promptText="Longe description">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="type" prefWidth="150.0">
+                           
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                   
+                  </ComboBox>
+                  <DatePicker fx:id="date" prefHeight="27.0" prefWidth="211.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </DatePicker>
+                  <Button fx:id="addEvent" mnemonicParsing="false" onAction="#ajouterEvenement" prefHeight="41.0" prefWidth="159.0" style="-fx-background-color: #273c75;" text="Add" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="97.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                     
+         
+               </children>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="684.0" prefWidth="631.0">
+               <children>
+                  <HBox prefHeight="166.0" prefWidth="484.0">
+                     <children>
+                        <TextField fx:id="smartSearch" onKeyPressed="#SearchIsEmpty" prefHeight="28.0" prefWidth="536.0" promptText="Search">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="130.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#SearchEvents" prefHeight="27.0" prefWidth="217.0" style="-fx-background-color: #273c75;" text="Search" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="130.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="noResult" prefHeight="17.0" prefWidth="324.0" textFill="#ee0606">
+                     <VBox.margin>
+                        <Insets left="120.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="evnentsVIew" onMouseClicked="#UpdatImage" prefHeight="521.0" prefWidth="472.0">
+                    <columns>
+                      <TableColumn fx:id="eventId" prefWidth="25.0" text="id" />
+                      <TableColumn fx:id="brieveDescription" onEditCommit="#editShortDescription" prefWidth="248.0" text="brève description" />
+                        <TableColumn fx:id="eventLocation" prefWidth="104.0" text="location" />
+                        <TableColumn fx:id="eventDate" prefWidth="91.0" text="date" />
+                        <TableColumn fx:id="Cimage" onEditCommit="#editImage" prefWidth="75.0" text="image" />
+                        <TableColumn fx:id="Cvalidation" prefWidth="69.5" text="validation" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets left="8.0" right="2.0" top="20.0" />
+                     </VBox.margin>
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#supprimerEvenement" text="SUpprimer" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefHeight="557.0" prefWidth="201.0">
+               <children>
+                  <ImageView fx:id="eventImage" fitHeight="344.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="8.0" left="5.0" right="5.0" top="180.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="createdAt" layoutX="30.0" prefHeight="111.0" prefWidth="198.0" text="      Date de creation">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Label>
+                  <Label fx:id="modifiedAt" layoutX="30.0" prefHeight="123.0" prefWidth="198.0" text="    Dernière modification" />
+               </children>
+               <HBox.margin>
+                  <Insets bottom="30.0" left="5.0" right="5.0" top="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

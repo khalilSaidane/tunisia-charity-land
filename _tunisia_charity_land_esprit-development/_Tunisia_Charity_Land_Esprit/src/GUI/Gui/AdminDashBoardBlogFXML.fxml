@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminDashBoardBlogFXMLController">
+   <children>
+      
+      
+      
+      
+      
+      <TableView fx:id="BlogTable" layoutX="257.0" layoutY="44.0" prefHeight="580.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="30.897872924804688" text="ID" />
+          <TableColumn fx:id="authorColumn" prefWidth="81.32606506347656" text="author Id" />
+            <TableColumn fx:id="titleColumn" prefWidth="170.5709228515625" text="Title" />
+            <TableColumn fx:id="contentColumn" prefWidth="582.4290771484375" text="Content" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteVutton" layoutX="456.0" layoutY="659.0" mnemonicParsing="false" onAction="#deleteSelectedPost" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #e84118;" text="Delete" textFill="WHITE" />
+      <Button fx:id="contactButton" layoutX="852.0" layoutY="659.0" mnemonicParsing="false" onAction="#contactMaker" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #fbc531;" text="Contact Creater" textFill="WHITE" />
+      <Button fx:id="refreshButton" layoutX="260.0" layoutY="659.0" mnemonicParsing="false" onAction="#refreshData" prefHeight="30.0" prefWidth="181.0" style="-fx-background-color: #273c75;" text="Refresh" textFill="WHITE" />
+      <Pane layoutX="2.0" layoutY="1.0" prefHeight="217.0" prefWidth="225.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="855.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin DashBoard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="profileButton" layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Profile" textFill="WHITE" />
+            <Button fx:id="usersButton" layoutX="50.0" layoutY="296.0" mnemonicParsing="false" onAction="#navigateToUsers" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="User" textFill="WHITE" />
+            <Button fx:id="blogButton" layoutX="50.0" layoutY="335.0" mnemonicParsing="false" onAction="#navigateToPosts" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Posts" textFill="WHITE" />
+            <Button fx:id="eventButton" layoutX="50.0" layoutY="370.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Events" textFill="WHITE" />
+            <Button fx:id="logoutButton" layoutX="50.0" layoutY="440.0" mnemonicParsing="false" onAction="#navigateToExit" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Logout" textFill="#f51212" />
+            <Button fx:id="apiControllButton" layoutX="50.0" layoutY="403.0" mnemonicParsing="false" onAction="#navigateToApiControll" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Api Control" textFill="WHITE" />
+            <ImageView fitHeight="99.0" fitWidth="142.0" layoutX="54.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/dashboardAdminLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Text fx:id="messageField" layoutX="258.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="511.33497619628906">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

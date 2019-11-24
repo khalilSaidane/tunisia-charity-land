@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BuyController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="718.0" prefWidth="191.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="889.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="homeButton" layoutX="48.0" layoutY="191.0" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="blogButton" layoutX="55.0" layoutY="237.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transparent;" text="Blog" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="eventButton" layoutX="45.0" layoutY="291.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="connectionButton" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="storeButton" layoutX="50.0" layoutY="399.0" mnemonicParsing="false" onAction="#navigateToStore" style="-fx-background-color: transparent;" text="Store" textFill="RED">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="product_img" fitHeight="321.0" fitWidth="306.0" layoutX="258.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" />
+      <Text fx:id="product_id" fill="#007ea4" layoutX="357.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" wrappingWidth="154.86661770567298">
+         <font>
+            <Font size="29.0" />
+         </font></Text>
+      <Text fill="#036f05" layoutX="734.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+         <font>
+            <Font size="33.0" />
+         </font></Text>
+      <Button fx:id="add_cart" layoutX="870.0" layoutY="532.0" mnemonicParsing="false" onAction="#addcart" prefHeight="44.0" prefWidth="131.0" style="-fx-background-color: #273c75;" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <TextArea fx:id="description_prod" layoutX="628.0" layoutY="188.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="28.0" />
+         </font>
+      </TextArea>
+      <Text fx:id="product_name" fill="#007ea4" layoutX="714.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" wrappingWidth="222.1332876086235">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <Text fx:id="price_prod" layoutX="834.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="33.0" />
+         </font></Text>
+      <Text fill="#007f04" layoutX="758.0" layoutY="493.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" wrappingWidth="131.40000393614173">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <TextField fx:id="quantity_v" layoutX="898.0" layoutY="466.0" prefHeight="38.0" prefWidth="58.0" />
+      <Text fill="#027c0e" layoutX="612.0" layoutY="574.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User_id">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="user_buy" layoutX="707.0" layoutY="543.0" prefHeight="41.0" prefWidth="96.0" />
+         </children>
+      </Pane>
+<Button fx:id="view_cart" layoutX="864.0" layoutY="615.0" mnemonicParsing="false" onAction="#tocart" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: red;" text="View cart">
+   <font>
+      <Font size="20.0" />
+   </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="myPane" prefHeight="717.0" prefWidth="1080.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutprodController">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="718.0" prefWidth="191.0" style="-fx-background-color: #273c75;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="889.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="homeButton" layoutX="48.0" layoutY="191.0" mnemonicParsing="false" onAction="#navigateToHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="blogButton" layoutX="55.0" layoutY="237.0" mnemonicParsing="false" onAction="#navigateToBlog" style="-fx-background-color: transparent;" text="Blog" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="eventButton" layoutX="45.0" layoutY="291.0" mnemonicParsing="false" onAction="#navigateToEvents" style="-fx-background-color: transparent;" text="Events" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="connectionButton" layoutX="28.0" layoutY="345.0" mnemonicParsing="false" onAction="#navigateToProfile" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <Button fx:id="storeButton" layoutX="50.0" layoutY="399.0" mnemonicParsing="false" onAction="#navigateToStore" style="-fx-background-color: transparent;" text="Store" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+     
+      </Pane>
+       
+                  <Button fx:id="Ajouter_prod1" layoutX="461.0" layoutY="485.0" mnemonicParsing="false" onAction="#ajout" prefHeight="37.0" prefWidth="174.0" style="-fx-background-color: #273c75;" text="Ajouter" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="id_prod" layoutX="310.0" layoutY="227.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="category_prod" layoutX="326.0" layoutY="383.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="Description_prod" layoutX="548.0" layoutY="383.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="Delegue_prod" layoutX="548.0" layoutY="226.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="Img_prod" layoutX="784.0" layoutY="227.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="price_prod" layoutX="310.0" layoutY="310.0" prefHeight="26.0" prefWidth="116.0" />
+      <TextField fx:id="quantity_prod" layoutX="548.0" layoutY="305.0" prefHeight="26.0" prefWidth="116.0" />
+      <Label layoutX="277.0" layoutY="232.0" text="ID" textFill="#3203ed" />
+      <Label layoutX="477.0" layoutY="387.0" text="Description" textFill="#3203ed" />
+      <Label layoutX="710.0" layoutY="231.0" text="Img URL" textFill="#3203ed" />
+      <Label layoutX="477.0" layoutY="231.0" text="Delegue ID" textFill="#3203ed" />
+      <Label layoutX="271.0" layoutY="387.0" text="Category" textFill="#3203ed" />
+      <Label layoutX="690.0" layoutY="310.0" text="Created at" textFill="#3203ed" />
+      <Label layoutX="269.0" layoutY="310.0" text="Price" textFill="#3203ed" />
+      <Label layoutX="484.0" layoutY="310.0" text="Quantity" textFill="#3203ed" />
+      <DatePicker fx:id="created_prod" layoutX="760.0" layoutY="305.0" prefHeight="26.0" prefWidth="140.0" />
+      <Text fill="#0800f2" layoutX="694.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+      <TextField fx:id="Name_prod" layoutX="791.0" layoutY="383.0" prefHeight="26.0" prefWidth="116.0" />
+   </children>
+</AnchorPane>

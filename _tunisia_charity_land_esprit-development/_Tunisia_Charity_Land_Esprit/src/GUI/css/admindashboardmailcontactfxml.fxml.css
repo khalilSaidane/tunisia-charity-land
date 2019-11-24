@@ -1,0 +1,37 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-display:flex;
+    -fx-background-color: white;
+}
+
+.navigationPane {
+    -fx-background-color: #192a56;
+    -fx-display:flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center
+}
+
+.logoHeader {
+    -fx-fill: white;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+}
+
+#topHeader {
+    -fx-background-color: #192a56;
+    -fx-border: 1px;
+    -fx-display:flex;
+    -fx-flex-direction: column;
+}
+
+#headerTitle {
+    -fx-fill:white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-font-display: block;
+    -fx-align-self: flex-start
+}
